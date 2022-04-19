@@ -27,7 +27,7 @@ score_map = HighScore.new()
 score_map = HighScore.add_player(score_map, "Dave Thomas")
 # => %{"Dave Thomas" => 0}
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
-# => %{"Dave Thomas" => 0, "José Valim"=> 486_373}
+# => %{"Dave Thomas" => 0, "José Valim"=> 486373}
 ```
 
 ## 3. Remove players from the score map
@@ -57,9 +57,9 @@ To reset a player's score, define `HighScore.reset_score/2`, which takes 2 argum
 score_map = HighScore.new()
 # => %{}
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
-# => %{"José Valim"=> 486_373}
+# => %{"José Valim" => 486373}
 score_map = HighScore.reset_score(score_map, "José Valim")
-# => %{"José Valim"=> 0}
+# => %{"José Valim" => 0}
 ```
 
 ## 5. Update a player's score
@@ -76,9 +76,9 @@ The function should also work if the player doesn't have a previous score - assu
 score_map = HighScore.new()
 # => %{}
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
-# => %{"José Valim"=> 486_373}
+# => %{"José Valim" => 486373}
 score_map = HighScore.update_score(score_map, "José Valim", 5)
-# => %{"José Valim"=> 486_378}
+# => %{"José Valim" => 5}
 ```
 
 ## 6. Get a list of players
@@ -91,9 +91,9 @@ To get a list of players, define `HighScore.get_players/1`, which takes 1 argume
 score_map = HighScore.new()
 # => %{}
 score_map = HighScore.add_player(score_map, "Dave Thomas", 2_374)
-# => %{"Dave Thomas" => 2_374}
+# => %{"Dave Thomas" => 2374}
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
-# => %{"Dave Thomas" => 2_374, "José Valim"=> 486_373}
+# => %{"Dave Thomas" => 2374, "José Valim"=> 486373}
 HighScore.get_players(score_map)
 # => ["Dave Thomas", "José Valim"]
 ```
